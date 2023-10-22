@@ -7,7 +7,9 @@ This API generates random integers without repetition and provides the results i
 Parameters:
 
 qtdNumeros: how many random numbers will be generated
+<br/>
 numMin: minimum number in the range
+<br/>
 numMax: maximum number in the range
 
 All parameters must be integers.
@@ -23,7 +25,9 @@ Esta API sorteia números inteiros sem repetição e fornece o resultado em orde
 Parâmetros:
 
 qtdNumeros: quantidade de números a sortear
+<br/>
 numMin: número mínimo do intervalo
+<br/>
 numMax: número máximo do intervalo
 
 Todos os parâmetros devem ser números inteiros.
