@@ -14,7 +14,7 @@ numMax: maximum number in the range
 
 All parameters must be integers.
 
-Endpoint with example parameters: https://api-sorteador-de-numeros.vercel.app/api?qtdNumeros=10&numMin=1&numMax=100
+Endpoint with example parameters: https://api-sorteador-de-numeros.vercel.app/sorteio?qtdNumeros=10&numMin=1&numMax=100
 
 <h2>Português</h2>
 
@@ -32,4 +32,8 @@ numMax: número máximo do intervalo
 
 Todos os parâmetros devem ser números inteiros.
 
-Endpoint com parâmetros de exemplo: https://api-sorteador-de-numeros.vercel.app/api?qtdNumeros=10&numMin=1&numMax=100
+Endpoint com parâmetros de exemplo: https://api-sorteador-de-numeros.vercel.app/sorteio?qtdNumeros=10&numMin=1&numMax=100
+
+<h2>Swagger</h2>
+
+https://api-sorteador-de-numeros.vercel.app/api-docs
