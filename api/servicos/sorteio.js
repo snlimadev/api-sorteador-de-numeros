@@ -49,8 +49,8 @@ function sorteiaNumeros(qtdNumeros, numMin, numMax) {
           'b) Todos os valores devem ser números inteiros; ' +
           'c) A quantidade de números deve ser no máximo 1000; ' +
           'd) O tamanho do intervalo deve ser maior que a quantidade de números; ' +
-          'e) O valor mínimo do intervalo deve ser menor que o valor máximo.' +
-          `f) O intervalo deve estar entre ${Number.MIN_SAFE_INTEGER} e ${Number.MAX_SAFE_INTEGER}`
+          'e) O valor mínimo do intervalo deve ser menor que o valor máximo; ' +
+          `f) O intervalo deve estar entre ${Number.MIN_SAFE_INTEGER} e ${Number.MAX_SAFE_INTEGER}.`
       }
     };
   }
