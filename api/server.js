@@ -1,17 +1,20 @@
 const express = require('express');
-const app = express();
-
 const cors = require('cors');
-app.use(cors());
 
 const swaggerUi = require('swagger-ui-express');
 const swaggerSpec = require('../swagger');
-const swaggerCss = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.11.0/swagger-ui.min.css';
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, { customCssUrl: swaggerCss }));
 
 const rotaSorteio = require('./rotas/sorteio');
 
-app.use('/api', rotaSorteio); // Manter compatibilidade com a versão anterior
+const app = express();
+
+app.use(cors());
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
+  customCssUrl: 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.11.0/swagger-ui.min.css'
+}));
+
+app.use('/api', rotaSorteio); // Manter compatibilidade com versões anteriores
 app.use('/sorteio', rotaSorteio);
 
 app.use((req, res, next) => {
