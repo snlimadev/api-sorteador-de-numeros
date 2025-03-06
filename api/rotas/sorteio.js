@@ -46,15 +46,8 @@
 const express = require('express');
 const router = express.Router();
 
-const { sorteiaNumeros } = require('../servicos/sorteio');
+const { controladorSorteio } = require('../controladores/sorteio');
 
-router.get('/', (req, res) => {
-  const qtdNumeros = Number(req.query.qtdNumeros);
-  const numMin = Number(req.query.numMin);
-  const numMax = Number(req.query.numMax);
-  const resultado = sorteiaNumeros(qtdNumeros, numMin, numMax);
-
-  res.status(resultado.status).json(resultado.json);
-});
+router.get('/', controladorSorteio);
 
 module.exports = router;
