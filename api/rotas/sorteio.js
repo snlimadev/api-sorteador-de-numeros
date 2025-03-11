@@ -57,7 +57,7 @@ const rateLimiter = rateLimit({
   limit: 150,
   standardHeaders: 'draft-7',
   legacyHeaders: false,
-  message: { error: 'Limite de taxa atingido para solicitações.' }
+  message: { erro: 'Limite de taxa atingido para solicitações.' }
 });
 
 router.use(rateLimiter);
