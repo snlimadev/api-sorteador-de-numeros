@@ -39,6 +39,8 @@
  *         description: Sucesso
  *       400:
  *         description: Solicitação Inválida
+ *       429:
+ *         description: Muitas Solicitações
  *       500:
  *         description: Erro Interno do Servidor
  */
@@ -46,7 +48,19 @@
 const express = require('express');
 const router = express.Router();
 
+const { rateLimit } = require('express-rate-limit');
+
 const { controladorSorteio } = require('../controladores/sorteio');
+
+const rateLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 150,
+  standardHeaders: 'draft-7',
+  legacyHeaders: false,
+  message: { error: 'Limite de taxa atingido para solicitações.' }
+});
+
+router.use(rateLimiter);
 
 router.get('/', controladorSorteio);
 

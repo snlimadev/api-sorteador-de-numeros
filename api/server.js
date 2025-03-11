@@ -8,6 +8,7 @@ const rotaSorteio = require('./rotas/sorteio');
 
 const app = express();
 
+app.set('trust proxy', 1);
 app.use(cors());
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {

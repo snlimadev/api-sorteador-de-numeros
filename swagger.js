@@ -5,7 +5,7 @@ const options = {
     swagger: '2.0',
     info: {
       title: 'Sorteador de Números',
-      version: '1.1.5',
+      version: '1.1.6',
       description: 'Uma API Node.js que sorteia números inteiros ' +
         'sem repetição e fornece o resultado em ordem crescente.'
     },
