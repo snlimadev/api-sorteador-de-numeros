@@ -65,6 +65,6 @@ const router = express.Router();
 router.use(rateLimiter);
 
 router.get('/', controladorSorteio);
-router.all('/', controladorSorteio);
+router.all('/', controladorSorteio); // Capturar métodos não permitidos
 
 module.exports = router;
