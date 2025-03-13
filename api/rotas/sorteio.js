@@ -39,6 +39,8 @@
  *         description: Sucesso
  *       400:
  *         description: Solicitação Inválida
+ *       405:
+ *         description: Método Não Permitido
  *       429:
  *         description: Muitas Solicitações
  *       500:
@@ -46,8 +48,6 @@
  */
 
 const express = require('express');
-const router = express.Router();
-
 const { rateLimit } = require('express-rate-limit');
 
 const { controladorSorteio } = require('../controladores/sorteio');
@@ -60,8 +60,11 @@ const rateLimiter = rateLimit({
   message: { erro: 'Limite de taxa atingido para solicitações.' }
 });
 
+const router = express.Router();
+
 router.use(rateLimiter);
 
 router.get('/', controladorSorteio);
+router.all('/', controladorSorteio);
 
 module.exports = router;
